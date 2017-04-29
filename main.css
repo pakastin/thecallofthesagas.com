@@ -147,7 +147,7 @@ header * {
 .buy p:hover {
   transform: scale(1.1, 1.1);
 }
-@media (max-width: 50rem) {
+@media (max-width: 800px) {
   html {
     font-size: 75%;
   }
