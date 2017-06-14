@@ -90,7 +90,14 @@
 
       ga('create', 'UA-2186928-33', 'auto');
       ga('send', 'pageview');
-
+    </script>
+    <script>
+      var trackOutboundLink = function(url) {
+         ga('send', 'event', 'outbound', 'click', url, {
+           'transport': 'beacon',
+           'hitCallback': function(){window.open(url);}
+         });
+      }
     </script>
   </body>
 </html>
