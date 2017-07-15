@@ -27,12 +27,12 @@
       <div class="wrapper">
         <div class="buy">
           <p>Listen audiobook</p>
-          <a href="https://www.audiobooks.com/audiobook/the-call-of-the-sagas/296238" onclick="trackOutboundLink(event, 'https://www.audiobooks.com/audiobook/the-call-of-the-sagas/296238');" target="_blank"><img src="img/audiobooks.png" style="padding: .75rem; width: 11rem;"></a>
+          <a href="https://www.audiobooks.com/audiobook/the-call-of-the-sagas/296238" onclick="trackOutboundLink('https://www.audiobooks.com/audiobook/the-call-of-the-sagas/296238');" target="_blank"><img src="img/audiobooks.png" style="padding: .75rem; width: 11rem;"></a>
           <p>Order book</p>
-          <a href="https://www.amazon.com/Call-Sagas-Iceland-Open-Boat/dp/9526744713" onclick="trackOutboundLink(event, 'https://www.amazon.com/Call-Sagas-Iceland-Open-Boat/dp/9526744713');" target="_blank"><img src="img/amazon.png" style="padding: .75rem; width: 11rem;"></a>
-          <a href="https://www.createspace.com/7252451" onclick="trackOutboundLink(event, 'https://www.createspace.com/7252451');" target="_blank"><img src="img/createspace.png" style="padding: .75rem; width: 11rem;"></a>
+          <a href="https://www.amazon.com/Call-Sagas-Iceland-Open-Boat/dp/9526744713" onclick="trackOutboundLink('https://www.amazon.com/Call-Sagas-Iceland-Open-Boat/dp/9526744713');" target="_blank"><img src="img/amazon.png" style="padding: .75rem; width: 11rem;"></a>
+          <a href="https://www.createspace.com/7252451" onclick="trackOutboundLink('https://www.createspace.com/7252451');" target="_blank"><img src="img/createspace.png" style="padding: .75rem; width: 11rem;"></a>
           <p>Download eBook</p>
-          <a href="https://www.amazon.com/dp/B072R5P9XX" onclick="trackOutboundLink(event, 'https://www.amazon.com/dp/B072R5P9XX');" target="_blank"><img src="img/kindle.png" style="padding: .75rem; width: 11rem;"></a>
+          <a href="https://www.amazon.com/dp/B072R5P9XX" onclick="trackOutboundLink('https://www.amazon.com/dp/B072R5P9XX');" target="_blank"><img src="img/kindle.png" style="padding: .75rem; width: 11rem;"></a>
         </div>
         <h3>A thrilling true story that made nautical history</h3>
         <p>In the year 1994, skipper Pekka Piri and navigator Matti Pulli piloted a 7-meter motorboat from Helsinki over the Baltic Sea, North Sea and North Atlantic to Iceland.</p>
@@ -67,12 +67,12 @@
         <div class="buy">
           <div style="text-align: center; padding-bottom: 4.5rem;"><img style="height: 20rem;" src="img/cover.jpg"></div>
           <p>Listen audiobook</p>
-          <a href="https://www.audiobooks.com/audiobook/the-call-of-the-sagas/296238" onclick="trackOutboundLink(event, 'https://www.audiobooks.com/audiobook/the-call-of-the-sagas/296238');" target="_blank"><img src="img/audiobooks.png" style="padding: .75rem; width: 11rem;"></a>
+          <a href="https://www.audiobooks.com/audiobook/the-call-of-the-sagas/296238" onclick="trackOutboundLink('https://www.audiobooks.com/audiobook/the-call-of-the-sagas/296238');" target="_blank"><img src="img/audiobooks.png" style="padding: .75rem; width: 11rem;"></a>
           <p>Order book</p>
-          <a href="https://www.amazon.com/Call-Sagas-Iceland-Open-Boat/dp/9526744713" onclick="trackOutboundLink(event, 'https://www.amazon.com/Call-Sagas-Iceland-Open-Boat/dp/9526744713');" target="_blank"><img src="img/amazon.png" style="padding: .75rem; width: 11rem;"></a>
-          <a href="https://www.createspace.com/7252451" onclick="trackOutboundLink(event, 'https://www.createspace.com/7252451');" target="_blank"><img src="img/createspace.png" style="padding: .75rem; width: 11rem;"></a>
+          <a href="https://www.amazon.com/Call-Sagas-Iceland-Open-Boat/dp/9526744713" onclick="trackOutboundLink('https://www.amazon.com/Call-Sagas-Iceland-Open-Boat/dp/9526744713');" target="_blank"><img src="img/amazon.png" style="padding: .75rem; width: 11rem;"></a>
+          <a href="https://www.createspace.com/7252451" onclick="trackOutboundLink('https://www.createspace.com/7252451');" target="_blank"><img src="img/createspace.png" style="padding: .75rem; width: 11rem;"></a>
           <p>Download eBook</p>
-          <a href="https://www.amazon.com/dp/B072R5P9XX" onclick="trackOutboundLink(event, 'https://www.amazon.com/dp/B072R5P9XX');" target="_blank"><img src="img/kindle.png" style="padding: .75rem; width: 11rem;"></a>
+          <a href="https://www.amazon.com/dp/B072R5P9XX" onclick="trackOutboundLink('https://www.amazon.com/dp/B072R5P9XX');" target="_blank"><img src="img/kindle.png" style="padding: .75rem; width: 11rem;"></a>
         </div>
       </div>
     </section>
@@ -108,12 +108,10 @@
       ga('send', 'pageview');
     </script>
     <script>
-      function trackOutboundLink (event, url) {
+      function trackOutboundLink (url) {
         ga('send', 'event', 'outbound', 'click', url, {
-          'transport': 'beacon',
-          'hitCallback': function(){window.open(url);}
+          'transport': 'beacon'
         });
-        event.preventDefault();
       }
     </script>
   </body>
